@@ -289,7 +289,7 @@ nav { flex-basis: 55%; }
 .banner-content h2,.banner-content h3 { text-transform: uppercase; }
 
 .banner-content h2 { 
-  padding-top: 3px;
+  padding-top: 20px;
   color: rgb(164,198,58);
   font-size: 24px;
   font-weight: bold;
@@ -374,18 +374,19 @@ nav { flex-basis: 55%; }
 /* request section end */
 
 /* finance section start */
-.finance { padding: 50px 0; }
+.finance { padding: 68px 0; }
 .finance .wrapper{ padding: 53px 5%; }
 .section-heading { padding: 20px 0; }
 
 .section-heading h3 {
   padding: 10px 0; 
-  font-size: 37px;
+  font-size: 39px;
   font-weight: 600;
 }
 
 .section-heading p { 
   color: rgb(131,135,140);
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -396,7 +397,7 @@ nav { flex-basis: 55%; }
 .finance .section-heading h3 { text-transform: capitalize; }
 
 .finance-items {
-  padding: 87px 0;
+  padding: 67px 0;
   display: flex;
   gap: 33px;
 }
@@ -460,6 +461,60 @@ nav { flex-basis: 55%; }
 }
 /* finance section end */
 
+/* growth section start */
+.growth { 
+  padding: 50px 0;
+  background: url('/assets/images/fun-facts-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+
+.growth h3 { line-height: 1.1; }
+.growth .section-heading p { color: rgb(255, 255, 255); }
+
+.growth-content {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.growth-details { flex-basis: 46%; }
+
+.growth-items {
+  flex-basis: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.growth-list {
+  flex-basis: 47%;
+}
+
+.growth-data {
+  padding: 33px 0;
+  background: rgba(153, 149, 149, 0.2);
+  text-align: center;
+}
+
+.growth-data span {
+  color: rgb(164,198,58);
+  font-size: 39px;
+  font-weight: bold;
+}
+
+.growth-data h4 {
+  padding: 6px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.para1,.para2 { line-height: 2;font-size: 16px; }
+.para1 { padding: 17px 0; }
+.para2 { padding: 20px 0; }
+.growth-btn { padding: 20px 0; }
+/* growth section end */
 
 
 
