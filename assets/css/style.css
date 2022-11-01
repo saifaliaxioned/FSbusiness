@@ -193,7 +193,7 @@ header .wrapper { padding: 0 4.5%; }
 .behance:hover{ color: rgb(255, 255, 0); }
 
 .bottom-content {
-  padding: 30px 0;
+  padding: 32px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -211,7 +211,7 @@ nav { flex-basis: 55%; }
 
 .nav-items {
   display: flex;
-  gap: 32px;
+  gap: 34px;
 }
 
 .nav-list { 
@@ -256,23 +256,24 @@ nav { flex-basis: 55%; }
   margin-top: 23px;
 }
 
-.banner-list { position: relative; }
+.banner-list { 
+  position: relative;
+  display: none;
+}
 
 .banner-content {
   width: 46%;
   position: absolute;
   top: 50%;
   left: 12.5%;
-  transform: translateY(-50%);
   color: rgb(255,255,255);
+  transform: translateY(-50%);
 }
 
-.banner-content h2,.banner-content h3 { 
-  text-transform: uppercase;
-}
+.banner-content h2,.banner-content h3 { text-transform: uppercase; }
 
 .banner-content h2 { 
-  padding-top: 9px;
+  padding-top: 3px;
   color: rgb(164,198,58);
   font-size: 24px;
   font-weight: bold;
@@ -305,6 +306,7 @@ nav { flex-basis: 55%; }
   font-size: 14px;
   font-weight: bold;
 }
+
 .banner-controls {
   width: 100%;
   padding: 0 3%;
@@ -315,9 +317,7 @@ nav { flex-basis: 55%; }
   justify-content: space-between;
 }
 
-.control {
-  text-indent: -9999px;
-}
+.control { text-indent: -9999px; }
 
 .control::before {
   float: left;
@@ -328,6 +328,7 @@ nav { flex-basis: 55%; }
 }
 .prev-btn::before { content: '\f053'; }
 .next-btn::before { content: '\f054'; }
+.active-banner { display: block; }
 /* banner section end */
 
 
