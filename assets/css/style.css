@@ -516,6 +516,40 @@ nav { flex-basis: 55%; }
 .growth-btn { padding: 20px 0; }
 /* growth section end */
 
+/* compnay section start */
+.company {
+  margin-top: 50px;
+  padding: 79px 0;
+}
+.company h3 { line-height: 1.2; }
+
+.company .wrapper{ padding: 60px 5%; }
+.company-content {
+  background: rgb(247,247,247);
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-image {
+  flex-basis: 48.5%;
+}
+
+.company-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-info {
+  padding: 30px 36px 20px 57px;
+  flex-basis: 51%;
+}
+
+.info-1,.info-2 { line-height: 2;}
+.info-1 { padding: 10px 0; }
+.info-2 { padding: 21px 0 27px 0; }
+.company-btn { padding-top: 6px; }
+/* compnay section end */
+
 
 
 
