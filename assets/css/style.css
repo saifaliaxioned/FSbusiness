@@ -662,6 +662,53 @@ nav { flex-basis: 55%; }
 
 .client-list { flex: 0 0 173px; }
 /* clients div end */
+
+/* services css start */
+/* services banner start */
+.services-banner .wrapper {
+  width: 100%;
+  height: 76vh;
+  padding: 0;
+  margin-top: 50px;
+  position: relative;
+}
+
+.services-banner-content { height: 100%; }
+
+.services-banner-info{
+  position:absolute;
+  top: 58%;
+  left: 50%;
+  color: rgb(255,255,255);
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.services-banner-image{
+  height: 100%;
+}
+.services-banner-image img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-banner-info h2 {
+  padding-bottom: 12px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.services-banner-info p {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* services banner end */
+
+/* navigation section start */
+
+/* navigation section end */
+/* services css end */
 /*=================================
   main styling ends here
 =================================*/
