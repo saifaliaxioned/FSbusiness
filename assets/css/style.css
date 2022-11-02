@@ -205,8 +205,7 @@ header .wrapper { padding: 0 4.5%; }
   display: none;
 }
 
-.logo { flex-basis: 30%; }
-nav { flex-basis: 55%; }
+nav { margin-right: 2.1%; }
 .logo img { transform: scaleX(1.11); }
 
 .nav-items {
@@ -278,7 +277,7 @@ nav { flex-basis: 55%; }
 }
 
 .banner-content {
-  width: 46%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 12.5%;
@@ -297,7 +296,7 @@ nav { flex-basis: 55%; }
 }
 
 .banner-content h3 {
-  width: 80%;
+  width: 39%;
   padding: 15px 0 12px 0;
   font-size: 49px;
   font-weight: bold;
@@ -306,6 +305,7 @@ nav { flex-basis: 55%; }
 }
 
 .banner-content P {
+  width: 48%;
   padding: 22px 0;
   font-size: 16px;
   line-height: 1.9;
@@ -488,9 +488,7 @@ nav { flex-basis: 55%; }
   gap: 32px;
 }
 
-.growth-list {
-  flex-basis: 47%;
-}
+.growth-list { flex: 1 0 40%; }
 
 .growth-data {
   padding: 33px 0;
@@ -710,6 +708,7 @@ nav { flex-basis: 55%; }
   padding: 153px 5% 140px;
   border-bottom: 1px solid rgb(235, 237, 237);
 }
+
 .navigation-content {
   display: flex;
   gap: 66px;
@@ -762,8 +761,21 @@ nav { flex-basis: 55%; }
   color: rgb(102, 105, 110);
   line-height: 2; 
 }
-.active-detail { display: block; }
+
+.active-detail { 
+  display: block;
+  animation: zoom .5s ease forwards;
+}
+
+@keyframes zoom {
+  0% { transform: scale(.8); }
+  100% { transform: scale(1); }
+}
 /* navigation section end */
+
+/* services clients div start */
+.services .clients .wrapper { padding: 65px 9%; }
+/* services clients div end */
 /* services css end */
 /*=================================
   main styling ends here
@@ -893,6 +905,39 @@ nav { flex-basis: 55%; }
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1280px starts here*/
+@media only screen and (max-width: 1280px) {
+  /* banner section start */
+  .banner-content h3 { width: 55%; }
+  .banner-content p { width: 58%; }
+  /* banner section end */
+}  
+/*media query for 995px starts here*/
+@media only screen and (max-width: 1024px) {
+  /* wrapper start */
+  .header-bottom .wrapper,.request .wrapper,.growth .wrapper,.footer-bottom .wrapper { padding: 0 2%; }
+  .finance .wrapper { padding: 53px 2%; }
+  .company .wrapper { padding: 60px 2%; }
+  .aboutUs .wrapper { padding: 60px 2% 70px; }
+  .callback .wrapper { padding: 57px 2% 88px; }
+  .clients .wrapper { padding: 65px 2% 94px; }
+  .footer-top .wrapper { padding: 81px 2% 82px; }
+  /* wrapper end */
+  
+  /* header start */
+  nav { margin-right: 0; }
+  .nav-items { gap: 10px; }
+  /* header end */
+
+  /* banner section start */
+  .banner-content {
+    width: 80%;
+    text-align: center;
+  }
+  .banner-content h3 { font-size: 35px; }
+  .banner-content h3,.banner-content p { width: 100%; }
+  /* banner section end */
+}  
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
