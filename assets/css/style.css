@@ -590,8 +590,7 @@ nav { flex-basis: 55%; }
 /* about us section end */
 
 /* callback section start */
-.callback { padding: 9px 0 48px 0; }
-.callback .wrapper { padding: 48px 5%; }
+.callback .wrapper { padding: 57px 5% 88px; }
 .callback .section-heading { padding-top: 80px; }
 
 .callback form {
@@ -639,18 +638,30 @@ nav { flex-basis: 55%; }
 .show-error { visibility: visible; }
 .input-group input.success { border: 2px solid rgb(0, 158, 3); }
 .input-group input.error { border: 2px solid rgb(0 149 255); }
-
-.input-control {
-  text-align: center;
-}
+.input-control { text-align: center; }
 
 .input-control input {
   padding: 13px 30px;
   border: 2px solid rgb(255, 255, 255);
   outline: none;
 }
-
 /* callback section end */
+
+/* clients div start */
+
+.clients .wrapper {
+  padding: 65px 9% 94px;
+  background: rgb(247,247,247);
+}
+
+.client-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.client-list { flex: 0 0 173px; }
+/* clients div end */
 /*=================================
   main styling ends here
 =================================*/
