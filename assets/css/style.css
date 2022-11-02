@@ -706,7 +706,63 @@ nav { flex-basis: 55%; }
 /* services banner end */
 
 /* navigation section start */
+.navigation .wrapper {
+  padding: 153px 5% 140px;
+  border-bottom: 1px solid rgb(235, 237, 237);
+}
+.navigation-content {
+  display: flex;
+  gap: 66px;
+}
 
+.navigation-items {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.navigation-list{
+  position: relative;
+  padding: 32px;
+  background: rgb(164,198,58);
+  color: rgb(0, 0, 0);
+}
+
+.navigation-list h3 {
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.navigation-list h3::after {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 50%;
+  right: 8.9%;
+  font-size: 14px;
+  transform: translateY(-50%);
+}
+
+.active-navigation { color: rgb(247,247,247); }
+.navigation-details { flex-basis: 70%; }
+
+.detail-list { display: none; }
+
+.navigation-details h4 {
+  padding-top: 25px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.navigation-details p { 
+  padding: 17px 0;
+  color: rgb(102, 105, 110);
+  line-height: 2; 
+}
+.active-detail { display: block; }
 /* navigation section end */
 /* services css end */
 /*=================================
