@@ -450,7 +450,7 @@ nav { flex-basis: 55%; }
 
 .bold-text {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
@@ -550,9 +550,43 @@ nav { flex-basis: 55%; }
 .company-btn { padding-top: 6px; }
 /* compnay section end */
 
+/* about us section start */
+.aboutUs { 
+  padding: 9px 0 48px 0;
+  background: rgb(247,247,247); 
+}
+.aboutUs .wrapper { padding: 60px 5% 70px 5%; }
+.aboutUs .section-heading,.about-list,.callback .section-heading { text-align: center; }
+.aboutUs .section-heading { padding-top: 80px; }
 
+.about-items {
+  padding: 90px 0;
+  display: flex;
+  gap: 33px;
+}
 
+.about-list {
+  padding: 30px;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+}
 
+.about-list span{
+  color: rgb(164,198,58);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.about-list p{
+  color: rgb(102, 105, 110);
+  line-height: 2;
+}
+
+.about-list span {
+  padding-top: 4px;
+  display: inline-block;
+}
+/* about us section end */
 /*=================================
   main styling ends here
 =================================*/
