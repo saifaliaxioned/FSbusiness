@@ -669,13 +669,122 @@ nav { flex-basis: 55%; }
 /*=================================
   footer styling starts here
 =================================*/ 
+/* footer top start */
+.footer-top .wrapper {
+  padding: 81px 5% 82px;
+  background: rgb(35,35,35);
+}
 
+.footer-items {
+  display: flex;
+  gap: 23px;
+  color: rgb(255, 255, 255);
+}
 
+.footer-list {
+  flex-basis: 25%;
+}
 
+.footer-list h5 {
+  padding-bottom: 35px;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 
+.footer-list p { line-height: 2; }
 
+.footer-social {
+  padding-top: 28px;
+  display: flex;
+  gap: 10px;
+}
 
+.footer-social-list a {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: rgb(255,255,255);
+  color: rgb(0, 0, 0);
+  text-indent: -9999px;
+  transition: all .5s ease;
+}
 
+.footer-social-list a:hover { transform: scale(1.1); }
+
+.footer-social-list a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  transform: translate(-50%,-50%);
+  text-indent: 0;
+}
+
+.useful-items,.additional-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.useful-list a,.additional-list a {
+  color: rgb(255,255,255);
+  transition: all .5s ease;
+}
+
+.useful-list a::first-letter,.additional-list a::first-letter { text-transform: uppercase; }
+
+.useful-list a:hover,.additional-list a:hover {
+  color: rgb(164,198,58);
+  text-decoration: underline;
+}
+
+.footer-top form,.footer-input-group {
+  display: flex;
+  flex-direction: column;
+}
+.footer-input-group input {
+  padding: 12px 15px;
+  border-radius: 30px;
+}
+
+.footer-input-group textarea { 
+  height: 133px;
+  padding: 16px 15px; 
+  border-radius: 20px;
+}
+
+.footer-input-group input,.footer-input-group textarea {
+  width: 100%;
+  border: 2px solid transparent;
+  background: rgb(52,52,52);
+  font-size: 14px;
+  outline: none;
+}
+
+.footer-input-control input {
+  margin-top: 6px;
+  padding: 15px 34px;
+  border: none;
+  outline: none;
+}
+/* footer top end */
+
+/* footer bottom start */
+.footer-bottom .wrapper {
+  background: rgb(52,52,52);
+}
+
+.copyright-content {
+  padding: 32px 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: capitalize;
+}
+/* footer bottom end */
  /*=================================
   footer styling ends here
 =================================*/ 
