@@ -552,15 +552,16 @@ nav { flex-basis: 55%; }
 
 /* about us section start */
 .aboutUs { 
-  padding: 9px 0 48px 0;
+  padding: 9px 0 49px 0;
+  margin-top: 15px;
   background: rgb(247,247,247); 
 }
 .aboutUs .wrapper { padding: 60px 5% 70px 5%; }
 .aboutUs .section-heading,.about-list,.callback .section-heading { text-align: center; }
-.aboutUs .section-heading { padding-top: 80px; }
+.aboutUs .section-heading { padding-top: 64px; }
 
 .about-items {
-  padding: 90px 0;
+  padding: 70px 0 90px 0;
   display: flex;
   gap: 33px;
 }
@@ -587,6 +588,69 @@ nav { flex-basis: 55%; }
   display: inline-block;
 }
 /* about us section end */
+
+/* callback section start */
+.callback { padding: 9px 0 48px 0; }
+.callback .wrapper { padding: 48px 5%; }
+.callback .section-heading { padding-top: 80px; }
+
+.callback form {
+  margin: 66px 0;
+  padding: 66px;
+  border-radius: 6px;
+  display: flex;
+  background: rgb(164,198,58);
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.top-inputs {
+  display: flex;
+  gap: 30px;
+}
+
+.top-inputs .input-group { flex-basis: 33%; }
+
+.input-group input {
+  padding: 12px 15px;
+  border-radius: 30px;
+}
+
+.input-group textarea { 
+  height: 133px;
+  padding: 16px 15px; 
+  border-radius: 20px;
+}
+
+.input-group input,.input-group textarea {
+  width: 100%;
+  border: 2px solid transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputError {
+  font-size: 12px;
+  visibility: hidden;
+  color: rgb(255,0,0);
+}
+
+.show-error { visibility: visible; }
+.input-group input.success { border: 2px solid rgb(0, 158, 3); }
+.input-group input.error { border: 2px solid rgb(0 149 255); }
+
+.input-control {
+  text-align: center;
+}
+
+.input-control input {
+  padding: 13px 30px;
+  border: 2px solid rgb(255, 255, 255);
+  outline: none;
+}
+
+/* callback section end */
 /*=================================
   main styling ends here
 =================================*/
