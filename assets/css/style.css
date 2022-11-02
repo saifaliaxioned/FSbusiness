@@ -940,7 +940,62 @@ nav { margin-right: 2.1%; }
 }  
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  /* header start */
+  .nav-list a { font-size: 14px; }
+  /* header end */
 
+  /* finance section start */
+  /* .section-heading h3 { font-size: 34px; } */
+  .finance-content p,.finance .green-btn { font-size: 12px; }
+  .bold-text {
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  /* finance section end */
 
+  /* growth section start */
+  .growth-content,.company-content { flex-direction: column; }
+  /* growth section end */
 
+  /* company section start */
+  .company-image {
+    padding-top: 50px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* company section end */
+
+  /* callback section start */
+  .top-inputs {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .top-inputs .input-group {
+    flex: 1 0 33%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* callback section end */
+
+  /* clients section start */
+  .clients .wrapper { padding: 40px 2%; }
+  .client-items { gap: 40px 0; }
+  .client-image { width: 173px; }
+
+  .client-list { 
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+  }
+  /* clients section end */
+
+  /* footer start */
+  .footer-items {
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+  .footer-list { flex-basis: 40%; }
+  /* footer end */
 }  
