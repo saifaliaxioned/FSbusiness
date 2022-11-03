@@ -816,6 +816,8 @@ nav { margin-right: 2.1%; }
 .services .clients .wrapper { padding: 65px 9%; }
 /* services clients div end */
 /* services css end */
+.removeScroll { overflow-y: hidden; }
+.hide-content { display: none;}
 /*=================================
   main styling ends here
 =================================*/
@@ -1195,4 +1197,96 @@ nav { margin-right: 2.1%; }
   /* callback section start */
   .callback .wrapper { padding: 0 2%; }
   /* callback section end */
+}
+/*media query for 640px starts here*/
+@media only screen and (max-width: 640px) {
+  /* header start */
+  .timing span, .contact-number a { font-size: 12px; }
+  /* header end */
+
+  /* banner start */
+  .banner-content { left: 9.5%; }
+  /* banner end */
+
+  /* finance section start */
+  .finance-list { flex-basis: 70%; }
+  .finance-content { text-align: center; }
+  /* finance section end */
+
+  /* growth section start */
+  .growth-items {
+    flex-basis: 100%;
+    gap: 20px;
+  }
+  /* growth section end */
+
+  /* callback section start */
+  .top-inputs .input-group { flex: 1 0 100%; }
+  /* callback section end */
+
+  /* footer start */
+  .footer-items,.footer-social {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-list { flex-basis: 67%; }
+  .copyright-content p { font-size: 11px; }
+  /* footer end */
+}
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  .section-heading h3 { font-size: 30px; }
+  .section-heading p { font-size: 12px; }
+  .green-btn,.request-btn .green-btn { padding: 11px 24px; }
+
+  /* header start */
+  .top-content { margin-left: 0; }
+  .header-top .wrapper { padding: 0; }
+  /* header end */
+
+  /* banner start */
+  .banner-content h2 { font-size: 16px; }
+  .banner-content h3 { font-size: 18px; }
+  /* banner end */
+
+  /* request section start */
+  .request-question h3 { font-size: 19px; }
+  .request-question p { font-size: 12px; }
+  /* request section end */
+
+  /* finance section start */
+  .finance .wrapper { padding: 0 2%; }
+  .content-details p { font-size: 12px; }
+  .finance-items { padding: 30px 0; }
+  .finance-list { flex-basis: 100%; }
+  /* finance section end */
+
+  /* callback section start */
+  .callback form { padding: 40px; }
+  /* callback section end */
+
+  /* growth section start */
+  .growth-list { flex: 1 0 100%; }
+  /* growth section end */
+
+  /* company section start */
+  .company-info { padding: 30px 15px 20px; }
+  .company-image { width: 90%; }
+  /* company section end */
+
+  /* about us section start */
+  .about-list {
+    padding: 15px;
+    flex-basis: 100%;
+  }
+  /* about us section end */
+
+  /* clients div start */
+  .client-list { flex: 0 0 100%; }
+  /* clients div end */
+  
+  /* footer start */
+  .footer-list { flex-basis: 100%; }
+  /* footer end */
 }
