@@ -4,6 +4,7 @@ var bannerList = document.querySelectorAll('.banner-list');
 var next = document.querySelector('.next-btn');
 var prev = document.querySelector('.prev-btn');
 var financeList = document.querySelectorAll('.finance-list');
+var navigationList = document.querySelectorAll('.navigation-list');
 var readMore = document.querySelectorAll('.finance-list a');
 var cancelContent = document.querySelectorAll('.cancel-content');
 var mainForm = document.mainForm;
@@ -83,7 +84,6 @@ function homeFunction() {
   readMore.forEach(function (btn,index) {
     btn.addEventListener('click',function () {
       var activeFinance = document.querySelector('.active-finance');
-      console.log('wor');
       if (activeFinance) {
         activeFinance.classList.remove('active-finance'); 
       }
@@ -99,12 +99,34 @@ function homeFunction() {
   commonFormJS(footerForm, footerFullName, footerEmail, footerTextarea);
 }
 
+function servicesFunction() {
+
+  // Tab navigation function 
+  navigationList.forEach(function(tablist,index){
+    tablist.addEventListener('click', function () {
+      var activeNavigation = document.querySelector('.active-navigation');
+      var activeDetail = document.querySelector('.active-detail');
+      var detailList = document.querySelectorAll('.detail-list');
+      activeNavigation.classList.remove('active-navigation');
+      tablist.classList.add('active-navigation');
+      activeDetail.classList.remove('active-detail');
+      detailList[index].classList.add('active-detail');
+    })
+  });
+
+  // form validation function
+  commonFormJS(mainForm, mainFullName, mainEmail, mainTextarea, mainSubject);
+  commonFormJS(footerForm, footerFullName, footerEmail, footerTextarea);
+}
+
 // Error function
 function validateInput(input, pattern, err) {
   if(pattern.test(input.value)) {
+    input.classList.remove('error');
     input.nextElementSibling.classList.remove("show-error");
     return true;
   } else {
+    input.classList.add('error');
     input.nextElementSibling.classList.add("show-error");
     input.nextElementSibling.innerText = err;
     return false;
@@ -116,39 +138,37 @@ function commonFormJS(form, fullname, email, textarea, subject) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var checkFullName = validateInput(fullname, stringPattern, "space separated first & last name");
-    var checkEmail = validateInput(email, emailPattern, "please write valid email address");
-    var checkTextarea = validateInput(textarea, generalPattern, "please fill the input");
-
+    var checkFullName = validateInput(fullname, stringPattern, "*Space separated first & last name");
+    var checkEmail = validateInput(email, emailPattern, "*Please write valid email address");
+    var checkTextarea = validateInput(textarea, generalPattern, "*Please fill the input");
+    
+    function successmodal() {
+      var div = document.createElement('div');
+      div.className = 'success-div';
+      div.innerHTML = `<p class="submit-icon" >success</p>`;
+      form.appendChild(div);
+      setTimeout(function () {
+        div.remove();
+      }, 1000);
+    }
     
     if(e.target == mainForm) {
-      var checkSubject = validateInput(subject, generalPattern, "please fill the input");
-
+      var checkSubject = validateInput(subject, generalPattern, "*Please fill the input");
       if (checkFullName && checkEmail && checkSubject && checkTextarea) {
-        alert("form submitted successfully");
-        var div = document.createElement('div');
-        div.className = 'success-div';
-        div.innerHTML = `<p>success</p>`;
-        form.appendChild(div);
+        successmodal();      
         form.reset();
       }
     }
-
+    
     if (e.target == footerForm) {
       if (checkFullName && checkEmail && checkTextarea) {
-        alert("form submitted successfully");
-        var div = document.createElement('div');
-        div.className = 'success-div';
-        div.innerHTML = `<p>success</p>`;
-        form.appendChild(div);
+        successmodal();      
         form.reset();
       }
     }
   });
 }
 
-// commonFormJS(mainForm, mainFullName, mainEmail, mainTextarea, mainSubject);
-// commonFormJS(footerForm, footerFullName, footerEmail, footerTextarea);
 
 
 
