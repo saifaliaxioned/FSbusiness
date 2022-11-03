@@ -237,9 +237,8 @@ nav { margin-right: 2.1%; }
 
 /* hamburger start */
 .hamburger {
-  width: 35px;
+  width: 41px;
   height: 35px;
-  border: 1px solid rgb(255,255,255);
   border-radius: 2px;
   position: relative;
   display: none; 
@@ -248,20 +247,16 @@ nav { margin-right: 2.1%; }
 
 .bar {
   width: 50%;
-  height: 2px;
+  height: 3px;
   border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
   display: inline-block;
-  background-color: rgb(255,255,255);
+  background-color: rgb(164,198,58);
   text-indent: -99999px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .bar::before,
@@ -272,16 +267,14 @@ nav { margin-right: 2.1%; }
   position: absolute;
   left: 0;
   background-color: inherit;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.bar::before { top: -6px; }
-.bar::after { top: 6px; }
-.active-hamburger .bar { -webkit-transform: translate(-50%,-50%) rotate(45deg); -ms-transform: translate(-50%,-50%) rotate(45deg); transform: translate(-50%,-50%) rotate(45deg); }
-.active-hamburger .bar::before { -webkit-transform: translateY(6px) rotate(0); -ms-transform: translateY(6px) rotate(0); transform: translateY(6px) rotate(0); }
-.active-hamburger .bar::after { -webkit-transform: translateY(-6px) rotate(-90deg); -ms-transform: translateY(-6px) rotate(-90deg); transform: translateY(-6px) rotate(-90deg); }
+.bar::before { top: -7px; }
+.bar::after { top: 7px; }
+.active-hamburger .bar { transform: translate(-50%,-50%) rotate(45deg); }
+.active-hamburger .bar::before { transform: translateY(6px) rotate(0); }
+.active-hamburger .bar::after { transform: translateY(-6px) rotate(-90deg); }
 /* hamburger end */
 
 .nav-list:hover::before{ width: 100%; }
@@ -1048,11 +1041,11 @@ nav { margin-right: 2.1%; }
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
   /* header start */
-  .header-top {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 4;
+  header { position: fixed; }
+  .header-bottom .wrapper { 
+    padding: 0 2%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 12px rgb(0, 0, 0,.1);
   }
 
   .top-content { justify-content: center; }
@@ -1117,7 +1110,7 @@ nav { margin-right: 2.1%; }
     transition: all .5s ease;
   }
 
-  .bottom-content { padding: 62px 0 32px; }
+  .bottom-content { padding: 0; }
 
   .active-hamburger + nav {
     left: 0;
