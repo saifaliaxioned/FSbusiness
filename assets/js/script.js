@@ -49,7 +49,6 @@ function homeFunction() {
   // slider function
   var initial = 0;
   bannerList[0].classList.add("active-banner");
-
   var autoPlay = setInterval(bannerAutoPlay, 4000);
   function bannerAutoPlay() {
     initial++;
@@ -58,7 +57,6 @@ function homeFunction() {
     }
     slider(initial);
   }
-
   function slider(num) {
     for (let i = 0; i < bannerList.length; i++) {
       bannerList[i].classList.remove("active-banner");
@@ -98,14 +96,12 @@ function homeFunction() {
       })
     })
   })
-
   // form validation function
   commonFormJS(mainForm, mainFullName, mainEmail, mainTextarea, mainSubject);
   commonFormJS(footerForm, footerFullName, footerEmail, footerTextarea);
 }
 
 function servicesFunction() {
-
   // Tab navigation function 
   navigationList.forEach(function(tablist,index){
     tablist.addEventListener('click', function () {
@@ -142,7 +138,6 @@ function validateInput(input, pattern, err) {
     input.nextElementSibling.classList.add("show-error");
     input.nextElementSibling.innerText = '*Field is required';
     return false;
-
   }
 }
 
