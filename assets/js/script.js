@@ -120,6 +120,20 @@ function servicesFunction() {
   commonFormJS(footerForm, footerFullName, footerEmail, footerTextarea);
 }
 
+blur(mainFullName, stringPattern, "*Space separated first & last name");
+blur(mainEmail, emailPattern, "*Please write valid email address");
+blur(mainSubject, generalPattern, "*Please fill the input");
+blur(mainTextarea, generalPattern, "*Please fill the input");
+blur(footerFullName, stringPattern, "*Space separated first & last name");
+blur(footerEmail, emailPattern, "*Please write valid email address");
+blur(footerTextarea, generalPattern, "*Please fill the input");
+
+function blur(input, pattern, err) {
+  input.addEventListener('blur', function () {
+    validateInput(input, pattern, err);
+  })
+}
+
 // Error function
 function validateInput(input, pattern, err) {
   if (input.value) {
