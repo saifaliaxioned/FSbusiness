@@ -50,13 +50,14 @@ function homeFunction() {
   var initial = 0;
   bannerList[0].classList.add("active-banner");
 
-  setInterval(function () {
+  var autoPlay = setInterval(bannerAutoPlay, 4000);
+  function bannerAutoPlay() {
     initial++;
     if (initial == bannerList.length) {
       initial = 0;
     }
     slider(initial);
-  }, 4000);
+  }
 
   function slider(num) {
     for (let i = 0; i < bannerList.length; i++) {
@@ -71,6 +72,8 @@ function homeFunction() {
       initial = 0;
     }
     slider(initial);
+    clearInterval(autoPlay);
+    autoPlay = setInterval(bannerAutoPlay, 4000);
   })
   prev.addEventListener("click", function () {
     initial--;
@@ -78,6 +81,8 @@ function homeFunction() {
       initial = bannerList.length - 1;
     }
     slider(initial);
+    clearInterval(autoPlay);
+    autoPlay = setInterval(bannerAutoPlay, 4000);
   })
 
   // Read more function
@@ -121,15 +126,23 @@ function servicesFunction() {
 
 // Error function
 function validateInput(input, pattern, err) {
-  if(pattern.test(input.value)) {
-    input.classList.remove('error');
-    input.nextElementSibling.classList.remove("show-error");
-    return true;
+  if (input.value) {
+    if(pattern.test(input.value)) {
+      input.classList.remove('error');
+      input.nextElementSibling.classList.remove("show-error");
+      return true;
+    } else {
+      input.classList.add('error');
+      input.nextElementSibling.classList.add("show-error");
+      input.nextElementSibling.innerText = err;
+      return false;
+    }
   } else {
     input.classList.add('error');
     input.nextElementSibling.classList.add("show-error");
-    input.nextElementSibling.innerText = err;
+    input.nextElementSibling.innerText = '*Field is required';
     return false;
+
   }
 }
 
@@ -145,11 +158,12 @@ function commonFormJS(form, fullname, email, textarea, subject) {
     function successmodal() {
       var div = document.createElement('div');
       div.className = 'success-div';
-      div.innerHTML = `<p class="submit-icon" >success</p>`;
+      div.innerHTML = `<span class="submit-icon">submit</span>
+                      <span class="success-message">success</span>`;
       form.appendChild(div);
       setTimeout(function () {
         div.remove();
-      }, 1000);
+      }, 2000);
     }
     
     if(e.target == mainForm) {
