@@ -123,7 +123,7 @@ header {
 }
 
 header .wrapper { padding: 0 4.5%; }
-.header-top { background: rgb(164,198,58); }
+.header-top .wrapper{ background: rgb(164,198,58); }
 
 .top-content {
   margin-left: .5%;
@@ -292,17 +292,11 @@ nav { margin-right: 2.1%; }
 .banner .wrapper {
   height: 100vh;
   padding: 0;
-  overflow: hidden;
+  position: relative;
   margin-top: 37px;
 }
 
 .banner-items { height: 100%; }
-
-.banner-list {
-  height: 100%;
-  display: none;
-  position: relative;
-}
 
 .banner-image { height: 100%; }
 .banner-image img { 
@@ -311,7 +305,7 @@ nav { margin-right: 2.1%; }
 }
 
 .banner-list { 
-  position: relative;
+  height: 100%;
   display: none;
   transition: all .5s ease;
 }
@@ -320,7 +314,7 @@ nav { margin-right: 2.1%; }
   width: 100%;
   position: absolute;
   top: 50%;
-  left: 12.5%;
+  padding-left: 12.5%;
   color: rgb(255,255,255);
   transform: translateY(-50%);
 }
@@ -328,7 +322,7 @@ nav { margin-right: 2.1%; }
 .banner-content h2,.banner-content h3 { text-transform: uppercase; }
 
 .banner-content h2 { 
-  padding-top: 20px;
+  padding-top: 22px;
   color: rgb(164,198,58);
   font-size: 24px;
   font-weight: bold;
@@ -336,7 +330,7 @@ nav { margin-right: 2.1%; }
 }
 
 .banner-content h3 {
-  width: 39%;
+  width: 45%;
   padding: 15px 0 12px 0;
   font-size: 49px;
   font-weight: bold;
@@ -345,7 +339,7 @@ nav { margin-right: 2.1%; }
 }
 
 .banner-content P {
-  width: 48%;
+  width: 53%;
   padding: 22px 0;
   font-size: 16px;
   line-height: 1.9;
@@ -374,7 +368,7 @@ nav { margin-right: 2.1%; }
   width: 100%;
   padding: 0 3%;
   position: absolute;
-  top: 61%;
+  top: 55.5%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
@@ -409,7 +403,7 @@ nav { margin-right: 2.1%; }
 /* banner section end */
 
 /* request section start */
-.request { background: rgb(164,198,58); }
+.request .wrapper{ background: rgb(164,198,58); }
 .request-content h3::first-letter,.request-content p::first-letter { text-transform: uppercase; }
 
 .request-content {
@@ -674,29 +668,40 @@ form .success-div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: rgb(164,198,58);
   transform: translate(-50%,-50%);
+  animation: fadeIn .3s ease;
 }
 
-.submit-icon {
+.success-message {
+  display: inline-block;
   color: #fff;
   font-size: 48px;
   font-weight: bold;
+  line-height: 1.4;
+}
+
+.submit-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: rgb(255 255 255);
+  color: rgb(164 198 58);
+  text-indent: -9999px;
 }
 
 .submit-icon::before {
   content: '\f00c';
-  padding: 20px;
-  border-radius: 50px;
   position: absolute;
-  top: 23%;
+  top: 50%;
   left: 50%;
-  background: rgb(255 255 255);
-  color: rgb(164 198 58);
-  font-family: 'FontAwesome';
-  font-size: 45px;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 40%);
-  transform: translate(-50%, -6%);
+  font-family: "FontAwesome";
+  font-size: 30px;
+  transform: translate(-50%,-50%);
+  text-indent: 0;
 }
 
 .top-inputs {
@@ -1035,6 +1040,9 @@ form .success-div {
   /* banner section start */
   .banner-content {
     width: 80%;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
   }
   .banner-content h3 { font-size: 35px; }
@@ -1217,7 +1225,6 @@ form .success-div {
   .banner-content { top: 56%; }
   .banner-content h2 { font-size: 19px; }
   .banner-content h3 { font-size: 22px; }
-  .banner-content p { font-size: 12px; }
 
   .green-btn {
     padding: 13px 29px;
@@ -1280,9 +1287,13 @@ form .success-div {
   .timing span, .contact-number a { font-size: 12px; }
   /* header end */
 
-  /* banner start */
-  .banner-content { left: 9.5%; }
-  /* banner end */
+  /* banner section start */
+  .banner-content p { 
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  .control::before { font-size: 18px; }
+  /* banner section end */
 
   /* finance section start */
   .finance-list { flex-basis: 70%; }
@@ -1328,8 +1339,14 @@ form .success-div {
   /* header end */
 
   /* banner start */
-  .banner-content h2 { font-size: 16px; }
-  .banner-content h3 { font-size: 18px; }
+  .banner .wrapper { height: 85vh; }
+  .banner-content h2 { font-size: 13px; }
+  .social-items { top: 71%; } 
+    
+  .banner-content h3 {
+    padding: 0;
+    font-size: 18px;
+  }
   /* banner end */
 
   /* request section start */
@@ -1422,12 +1439,11 @@ form .success-div {
   /* banner start */
   .banner .wrapper,.services-banner .wrapper  { height: 51vh; }
   .banner-content { top: 63%; }
-  .banner-content h2,.banner-content h3 { font-size: 12px; }
-  .banner-controls { top: 39%; }
-  .banner-content p { 
-    padding: 0;
-    font-size: 9px;
-  }
+  .banner-content h2 { font-size: 9px; }
+  .banner-content h3 { font-size: 11px; }
+  .banner-content p { font-size: 9px; }
+  .banner-btn { padding: 0;}
+  .banner-controls { top: 61.5%; }
   .control::before { font-size: 15px; }
   /* banner end */
 
